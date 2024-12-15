@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #774ae2;
+    --secondary-color: #f5a623;
+    --danger-color: #e74c3c;
+    --background-color: #f7f9fc;
+    --text-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --color-ip: white;
+}
+
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+li {
+    background-color: #f1f5f9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+input[type="text"] {
+    width: 96%;
+    padding: 0.60rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: #8a71fc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.RemoveButton {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--danger-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.RemoveButton::before {
+    content: '×';
+}
+
+.RemoveButton:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.RemoveButton:active {
+    transform: scale(1);
+}
+
+@media (max-width: 480px) {
+    .App {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.ErrorMsg {
+    color: red;
+    font-size: 25px;
+}
+
+.Button2 {
+    width: 100%;
+    padding: 0.70rem;
+    font-size: 1rem;
+    color: var(--color-ip);
+    background-color: red;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.Button2:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
