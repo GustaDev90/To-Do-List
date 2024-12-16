@@ -15,6 +15,7 @@ export default function App() {
 
     //Adiciona uma tarefa
     function handleAddTarefa() {
+        
         setTarefas([...tarefas, input]);
         setInput("");
 
