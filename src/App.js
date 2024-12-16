@@ -15,6 +15,8 @@ export default function App() {
 
     //Adiciona uma tarefa
     function handleAddTarefa() {
+        setTarefas([...tarefas, input]);
+        setInput("");
 
         //Erro caso a tarefa seja vazia
         if (input.trim() === "") {
@@ -23,9 +25,6 @@ export default function App() {
         } else {
             setError("");
         }
-
-        setTarefas([...tarefas, input]);
-        setInput("");
 
     }
     
@@ -45,6 +44,7 @@ export default function App() {
 
     }
 
+    //useMemo para contar quantas tarefas então em execução
     const totalTarefas = useMemo(() => tarefas.length, [tarefas]);
     
     //Conteúdo da pagina
