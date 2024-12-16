@@ -24,7 +24,7 @@ export default function App() {
             setError("");
         }
 
-        setTarefas(tarefas);
+        setTarefas([...tarefas, input]);
         setInput("");
 
     }
