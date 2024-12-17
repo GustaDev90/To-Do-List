@@ -60,8 +60,6 @@ export default function App() {
 
                 {tarefas.map((tarefa, index) => (
                     
-                    .filter((tarefas) => task.trim() !== "")
-                    
                     <li
                        key={index}>{tarefa}
                        <Button onClick={handleRemoveTarefa} className="RemoveButton"></Button>
