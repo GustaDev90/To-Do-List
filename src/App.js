@@ -17,7 +17,7 @@ export default function App() {
     function handleAddTarefa() {
      //Verifica se entá vazia ou não
      if (input.trim() !== "") {
-        setTarefas([...tarefas, input]); // Adiciona a nova tarefa
+        setTarefas([...tarefas, input]); // Adiciona uma nova tarefa
         setInput(""); //Limpa o input ao ser enviado uma tarefa
         setError(""); // Limpa a mensagem de erro ao ser inserido o uma tarefa valida
          
