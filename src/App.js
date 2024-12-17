@@ -62,9 +62,12 @@ export default function App() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder = "Nova tarefa"
+                style = ({
+                    borderColor: input ? 'red' : '#ccc',
+                })
             />
 
- {error && (
+{error && (
     <p style={{
         color: 'red',
         fontWeight: 'bold',
@@ -73,15 +76,15 @@ export default function App() {
     }}>
         {error}
     </p>
-)
+)}
 
-            <Button onClick={handleAddTarefa} className="Button1">
-                Adicionar Tarefa
-            </Button>
+<Button onClick={handleAddTarefa} className="Button1">
+    Adicionar Tarefa
+</Button>
 
-            <Button onClick={handleRemoveAllTarefas} className="Button2">
-                Remover tudo
-            </Button>
-        </div>
+<Button onClick={handleRemoveAllTarefas} className="Button2">
+    Remover tudo
+</Button>
+
     );
 }
