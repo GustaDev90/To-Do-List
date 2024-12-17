@@ -18,11 +18,11 @@ export default function App() {
      //Verifica se entá vazia ou não
      if (input.trim() !== "") {
         setTarefas([...tarefas, input]); // Adiciona a nova tarefa
-        setError(""); // Limpa o erro
-        setInput(""); //Lima o input
+        setInput(""); //Limpa o input ao ser enviar tarefa
+        setError(""); // Limpa a mensagem de erro ao ser inserido o uma tarefa valida
          
      } else {
-        setError("Insira uma tarefa"); // Atualiza o erro
+        setError("Insira uma tarefa"); // mensagem de erro
      }
 
     }
