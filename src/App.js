@@ -22,7 +22,6 @@ export default function App() {
         } else {
             setTarefas([...tarefas, input]); // Adiciona a nova tarefa
             setError(""); // Limpa o erro
-            setInput(""); // Limpa o input
         }
     }
 
