@@ -17,7 +17,7 @@ export default function App() {
     function handleAddTarefa() {
         
         setTarefas([...tarefas, input]);
-        setInput("");
+        return;
 
         //Erro caso a tarefa seja vazia
         if (input.trim() === "") {
