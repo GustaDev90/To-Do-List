@@ -61,12 +61,10 @@ export default function App() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder={error ? "Por favor digite uma tarefa" : "Nova tarefa"} // Placeholder dinâmico
-                style={{
-                    borderColor: error ? 'red' : '#ccc', 
-                    color: error ? 'red' : '#000', 
-                }}
+                placeholder = "Nova tarefa"
             />
+
+            {error && <p style={{ color: 'red', fontWeight: 'bold' }}>{error}</p>}
 
             <Button onClick={handleAddTarefa} className="Button1">
                 Adicionar Tarefa
@@ -75,8 +73,6 @@ export default function App() {
             <Button onClick={handleRemoveAllTarefas} className="Button2">
                 Remover tudo
             </Button>
-
-            {error && <p style={{ color: 'red', fontWeight: 'bold' }}>{error}</p>}
         </div>
     );
 }
