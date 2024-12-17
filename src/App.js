@@ -22,7 +22,7 @@ export default function App() {
         //Erro caso a tarefa seja vazia
         if (input.trim() === "") {
            setError("Por favor, digite uma tarefa valida");
-           setInput('');
+           setInput("");
 
         } else {
             setError("");
