@@ -21,7 +21,6 @@ export default function App() {
         setError(""); // Limpa o erro
      } else {
         setError("Insira uma tarefa"); // Atualiza o erro
-        setInput(""); // Limpa o input
      }
 
     }
