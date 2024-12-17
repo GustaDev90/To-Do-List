@@ -17,7 +17,7 @@ export default function App() {
     function handleAddTarefa() {
         //Erro caso a tarefa seja vazia
         if (input.trim() === "") {
-           setError("Por favor, digite uma tarefa valida");
+           setError(error);
            setInput("");
 
         } else {
@@ -52,8 +52,7 @@ export default function App() {
         <div className="App">
         
             <h1>Lista de Tarefas</h1>
-        
-            <h1 className="ErrorMsg">{error}</h1>
+            
             <ul>
 
                 {tarefas.map((tarefa, index) => (
@@ -73,7 +72,7 @@ export default function App() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="nova tarefa"
+                placeholder={error ? "Por favor digite uma tarefa" : "nova tarefas"}
             />
 
                <Button onClick={handleAddTarefa} className="Button1">
