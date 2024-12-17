@@ -64,7 +64,16 @@ export default function App() {
                 placeholder = "Nova tarefa"
             />
 
-            {error && <p style={{ color: 'red', fontWeight: 'bold' }}>{error}</p>}
+ {error && (
+    <p style={{
+        color: 'red',
+        fontWeight: 'bold',
+        marginTop: '5px', 
+        fontSize: '14px'  
+    }}>
+        {error}
+    </p>
+)
 
             <Button onClick={handleAddTarefa} className="Button1">
                 Adicionar Tarefa
