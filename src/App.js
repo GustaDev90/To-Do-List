@@ -19,6 +19,8 @@ export default function App() {
      if (input.trim() !== "") {
         setTarefas([...tarefas, input]); // Adiciona a nova tarefa
         setError(""); // Limpa o erro
+        setInput(""); //Lima o input
+         
      } else {
         setError("Insira uma tarefa"); // Atualiza o erro
      }
