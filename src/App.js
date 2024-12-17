@@ -17,12 +17,12 @@ export default function App() {
     function handleAddTarefa() {
         
         setTarefas([...tarefas, input]);
-        return;
+        setInput("")
 
         //Erro caso a tarefa seja vazia
         if (input.trim() === "") {
            setError("Por favor, digite uma tarefa valida");
-           setTarefas("")
+           return;
 
         } else {
             setError("");
