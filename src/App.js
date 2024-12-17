@@ -15,16 +15,15 @@ export default function App() {
 
     // Adiciona uma tarefa
     function handleAddTarefa() {
-        // Erro para ao inserir tarefas vazias
-        if (input.trim() === "") {
-            setError("Insira uma tarefa"); // Atualiza o erro
-            setInput(""); // Limpa o input
-            
-        //else para quando enviar uma tarefa valida
-        } else {
-            setTarefas([...tarefas, input]); // Adiciona a nova tarefa
-            setError(""); // Limpa o erro
-        }
+     //Verifica se entá vazia ou não
+     if (input.trim() !== "") {
+        setTarefas([...tarefas, input]); // Adiciona a nova tarefa
+        setError(""); // Limpa o erro
+     } else {
+        setError("Insira uma tarefa"); // Atualiza o erro
+        setInput(""); // Limpa o input
+     }
+
     }
 
     // Remove uma tarefa
