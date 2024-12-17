@@ -22,7 +22,7 @@ export default function App() {
         setError(""); // Limpa a mensagem de erro ao ser inserido o uma tarefa valida
          
      } else {
-        setError("Insira uma tarefa"); // mensagem de erro
+        setError("Insira uma tarefa"); // Mensagem de erro
      }
 
     }
