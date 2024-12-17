@@ -62,6 +62,10 @@ export default function App() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={error ? "Por favor digite uma tarefa" : "Nova tarefa"} 
+                style = ({
+                     borderColor: error ? 'red' : '#ccc', 
+                     color: error ? 'red' : '#000', 
+                })
             />
 
             <Button onClick={handleAddTarefa} className="Button1">
