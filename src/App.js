@@ -58,7 +58,7 @@ export default function App() {
             <h1 className="ErrorMsg">{error}</h1>
             <ul>
 
-                {tarefas.filter(tarefa => tarefa.trim() !== "").map((tarefa, index) => (
+                {tarefas.map((tarefa, index) => (
                     
                     <li
                        key={index}>{tarefa}
