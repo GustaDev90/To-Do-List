@@ -68,16 +68,15 @@ export default function App() {
                 }}
             />
 
-            {error && (
-                <p style={{
-                    color: 'red',
-                    fontWeight: 'bold',
-                    marginTop: '1px', 
-                    fontSize: '14px'  
+               <p style={{
+                  color: 'red',
+                  fontWeight: 'bold',
+                  marginTop: '1px', 
+                  fontSize: '14px'
                 }}>
-                    {error}
+                   {error}
                 </p>
-            )}
+
 
             <Button onClick={handleAddTarefa} className="Button1">
                 Adicionar Tarefa
