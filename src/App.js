@@ -4,8 +4,8 @@ import Button from "./Button";
 
 export default function App() {
     // Variáveis de estado
-    const [input, setInput] = useState("");
-    const [tarefas, setTarefas] = useState([]);
+    const [input, setInput] = useState(""); // Estado para o input
+    const [tarefas, setTarefas] = useState([]); // Estado paras tarefas
     const [error, setError] = useState(""); // Estado para o erro
 
     // Carrega as tarefas do localStorage
