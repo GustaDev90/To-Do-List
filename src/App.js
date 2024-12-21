@@ -13,6 +13,14 @@ export default function App() {
         localStorage.setItem("tarefas", JSON.stringify(tarefas));
     }, [tarefas]);
 
+    useEffect(() => {
+        const tarefasStorage = localStorage.getItem("tarefas");
+
+        if (tarefasStorage) {
+            setTarefas(tarefasStorage);
+        }
+    }, [])
+
     // Adiciona uma tarefa
     function handleAddTarefa() {
      //Verifica se entá vazia ou não
