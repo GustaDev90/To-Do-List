@@ -9,18 +9,22 @@ export default function App() {
     const [error, setError] = useState(""); // Estado para o erro
 
     // Adiciona uma tarefa
-    function handleAddTarefa() {
-     //Verifica se entá vazia ou não
-     if (input.trim() !== "") {
-        setTarefas([...tarefas, input]); // Adiciona uma nova tarefa
-        setInput(""); //Limpa o input ao ser enviado uma tarefa
-        setError(""); // Limpa a mensagem de erro ao ser inserido o uma tarefa valida
+   function handleAddTarefa() {
+     try {
+        if (input.trim() !== "") {
+            setTarefas([...tarefas, input]); //Envia a tarefa
+            setInput(""); //Limpa o input ao enviar o tarefa
+            setError(""); // Limpa o erro caso o input seja válido
+        } else {
+            throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
+        }
          
-     } else {
-        setError("Insira uma tarefa"); // Mensagem de erro
-     }
+        } catch (error) {
+           console.error("Erro:", error.message); // Exibe o erro no console para debug
+           setError(error.message); // Exibe a mensagem de erro na tela
+        }
+      }
 
-    }
 
     // Remove uma tarefa
     function handleRemoveTarefa(index) {
