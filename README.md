@@ -1,6 +1,6 @@
-# 📝 To Do List App
+# 📝 To Do List
 
-Bem-vindo ao **To Do List App**, uma aplicação simples e eficiente desenvolvida em React para ajudar você a organizar suas tarefas de maneira prática. 🚀
+Bem-vindo ao meu **To Do List**, uma aplicação simples e eficiente desenvolvida em React que ajuda a organizar suas tarefas de maneira prática. 🚀
 
 ---
 
