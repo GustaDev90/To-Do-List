@@ -1,6 +1,6 @@
 # 📝 To Do List
 
-Bem-vindo ao meu **To Do List**, uma aplicação simples e eficiente desenvolvida em React que ajuda a organizar suas tarefas de maneira prática. 🚀
+Bem-vindo ao meu **To Do List**, uma aplicação simples e eficiente desenvolvida em React.js que ajuda a organizar suas tarefas de maneira prática. 🚀
 
 ---
 
