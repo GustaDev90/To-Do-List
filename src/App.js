@@ -15,6 +15,7 @@ export default function App() {
             setTarefas([...tarefas, input]); //Envia a tarefa
             setInput(""); //Limpa o input ao enviar o tarefa
             setError(""); // Limpa o erro caso o input seja válido
+            
         } else {
             throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
         }
