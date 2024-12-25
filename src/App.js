@@ -63,12 +63,10 @@ export default function App() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Nova tarefa"
-                style={{
-                    borderColor: error ? 'red' : '#ccc', 
-                }}
+                style={{ borderColor: error ? 'red' : '#ccc', }}
             />
 
-             <p style={{color: 'red', fontWeight: 'bold', marginTop: '1px', fontSize: '14px'}}>
+             <p style={{ color: 'red', fontWeight: 'bold', marginTop: '1px', fontSize: '14px' }}>
                 {error}
               </p>
 
