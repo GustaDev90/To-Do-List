@@ -21,7 +21,7 @@ export default function App() {
         }
          
         } catch (error) {
-           console.error("Erro:", error.message); // Exibe o erro no console para debug
+           console.error("Erro 253"); // Exibe o erro no console para debug
            setError(error.message); // Exibe a mensagem de erro na tela
         }
       }
