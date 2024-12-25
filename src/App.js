@@ -68,13 +68,8 @@ export default function App() {
                 }}
             />
 
-             <p style={{
-                  color: 'red',
-                  fontWeight: 'bold',
-                  marginTop: '1px', 
-                  fontSize: '14px'
-                }}>
-                   {error}
+             <p style={{color: 'red', fontWeight: 'bold', marginTop: '1px', fontSize: '14px'}}>
+                {error}
               </p>
 
 
