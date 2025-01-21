@@ -39,6 +39,13 @@ export default function App() {
         setTarefas([]);
     }
 
+    //Enviar tarefa com a tecla enter
+    function keyPrees (e) {
+        if (e.key === "Enter") {
+           setTarefas([...tarefas, input]); //Envia a tarefa
+        }
+    }
+
     // useMemo para contar quantas tarefas estão em execução
     const totalTarefas = useMemo(() => tarefas.length, [tarefas]);
 
@@ -63,6 +70,7 @@ export default function App() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Nova tarefa"
+                onKeyPress={keyPress}
                 style={{ borderColor: error ? 'red' : '#ccc', }}
             />
 
