@@ -40,7 +40,7 @@ export default function App() {
     }
 
     //Enviar tarefa com a tecla enter
-    function keyPrees (e) {
+    function keyPress (e) {
         if (e.key === "Enter") {
            setTarefas([...tarefas, input]); //Envia a tarefa
         }
