@@ -43,6 +43,7 @@ export default function App() {
     function keyPress (e) {
         if (e.key === "Enter") {
            setTarefas([...tarefas, input]); //Envia a tarefa
+           setInput("")  //Limpa o input ao enviar o tarefa
         }
     }
 
