@@ -71,8 +71,8 @@ export default function App() {
 
             <ul>
                 {tarefas.map((tarefa, index) => (
-                    <input type="checkbox" style={{ color: 'green'}}>
                     <li key={index}>
+                        <input type="checkbox" style={{ color: 'green'}}>
                         {tarefa}
                         <Button onClick={handleRemoveTarefa} className="RemoveButton"/>
                     </li>
