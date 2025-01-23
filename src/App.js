@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import "./App.css";
 import Button from "./Button";
 
@@ -7,6 +7,19 @@ export default function App() {
     const [input, setInput] = useState(""); // Estado para o input
     const [tarefas, setTarefas] = useState([]); // Estado paras tarefas
     const [error, setError] = useState(""); // Estado para o erro
+
+    useEffect(()=> {
+        const tarefaSalvas = localStorage.getItem("tarefas")
+        if (tarefasSalvas) {
+            setTarefes(JSON.parse(tarefasSalvas))
+        }
+    }, [])
+
+    useEffect(() => {
+        if (tarefas.length > 0) {
+            localStorage.setItem("tarefas", JSON.stringify(tarefas))
+        }
+    }, [tarefas])
 
     // Adiciona uma tarefa
    function handleAddTarefa() {
