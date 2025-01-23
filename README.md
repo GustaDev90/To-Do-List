@@ -11,6 +11,6 @@ Bem-vindo ao meu **To Do List**, uma aplicação simples e eficiente desenvolvid
 - **Limpar todas as tarefas**: Uma opção para deletar todas as tarefas de uma vez.
 - **Contador de tarefas**: Veja a quantidade total de tarefas em execução.
 - **Validação de entrada**: Mensagem de erro ao tentar adicionar uma tarefa vazia.
-- **Local Storage**: As tarefas que seram salvas no Local Storage, ou seja elas continuar na tela mesmo recarregando a pagina, ou saindo.
+- **Local Storage**: As tarefas seram salvas no Local Storage, ou seja elas continuar na tela mesmo recarregando a pagina, ou saindo.
 
 ---
