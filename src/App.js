@@ -66,7 +66,7 @@ export default function App() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Nova tarefa"
-                onKeyPress={keyPress}
+                onKeyDown={keyPress} 
                 style={{ borderColor: error ? 'red' : '#ccc', }}
             />
 
