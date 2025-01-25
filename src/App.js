@@ -40,9 +40,11 @@ export default function App() {
 
     //Enviar tarefa com a tecla enter
     function keyPress (e) {
-        if (e.key === "Enter") {
+        if (e.key === "Enter" && input.trim() !== "") {
            setTarefas([...tarefas, input]); //Envia a tarefa
            setInput("")  //Limpa o input ao enviar o tarefa
+        } else {
+          throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
         }
     }
 
