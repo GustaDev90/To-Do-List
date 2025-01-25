@@ -8,7 +8,7 @@ export default function App() {
     const [tarefas, setTarefas] = useState([]); // Estado paras tarefas
     const [error, setError] = useState(""); // Estado para o erro
 
-    // Adiciona uma tarefa
+   // Adiciona uma tarefa
    function handleAddTarefa() {
      try {
         if (input.trim() !== "") {
@@ -25,7 +25,7 @@ export default function App() {
         }
       }
 
-      //Enviar tarefa com a tecla enter
+    //Enviar tarefa com a tecla enter
     function keyPress (e) {
       try {
         if (e.key === "Enter" && input.trim() !== "") {
