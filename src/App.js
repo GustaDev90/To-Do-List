@@ -8,20 +8,6 @@ export default function App() {
     const [tarefas, setTarefas] = useState([]); // Estado paras tarefas
     const [error, setError] = useState(""); // Estado para o erro
 
-     useEffect(() => {
-        const tarefasSalvas = localStorage.getItem("tarefas");
-        if (tarefasSalvas) {
-            setTarefas(JSON.parse(tarefasSalvas));
-        }
-    }, []);
-
-    // Salvar tarefas no localStorage sempre que a lista mudar
-    useEffect(() => {
-        if (tarefas.length > 0) {
-            localStorage.setItem("tarefas", JSON.stringify(tarefas));
-        }
-    }, [tarefas]);
-
     // Adiciona uma tarefa
    function handleAddTarefa() {
      try {
