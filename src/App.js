@@ -10,36 +10,25 @@ export default function App() {
 
    // Adiciona uma tarefa
    function handleAddTarefa() {
-     try {
         if (input.trim() !== "") {
             setTarefas([...tarefas, input]); //Envia a tarefa
             setInput(""); //Limpa o input ao enviar o tarefa
             setError(""); // Limpa o erro caso o input seja válido
-            
         } else {
-           throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
-        }
-         
-        } catch (error) {
-           setError(error.message); // Exibe a mensagem de erro na tela
+           setError("Insira uma tarefa")
         }
       }
 
     //Enviar tarefa com a tecla enter
     function keyPress (e) {
-      try {
         if (e.key === "Enter" && input.trim() !== "") {
            setTarefas([...tarefas, input]); //Envia a tarefa
            setInput("")  //Limpa o input ao enviar o tarefa
            setError(""); // Limpa o erro caso o input seja válido
         } else {
-           throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
+           setError("Insira uma tarefa")
         } 
-      } catch (error) {
-         setError(error.message) // Exibe a mensagem de erro na tela
-      }
     }
-
 
     // Remove uma tarefa
     function handleRemoveTarefa(index) {
