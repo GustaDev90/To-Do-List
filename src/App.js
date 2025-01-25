@@ -72,7 +72,7 @@ export default function App() {
                 {tarefas.map((tarefa, index) => (
                     <li key={index}>
                         {tarefa}
-                        <Button onClick={handleRemoveTarefa(index)} className="RemoveButton"/>
+                        <Button onClick={() => handleRemoveTarefa(index)} className="RemoveButton"/>
                     </li>
                 ))}
             </ul>
