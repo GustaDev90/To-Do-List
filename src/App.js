@@ -31,12 +31,11 @@ export default function App() {
             setError(""); // Limpa o erro caso o input seja válido
             
         } else {
-            throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
+          throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
         }
          
         } catch (error) {
-           console.error("Erro:", error.message); // Exibe o erro no console para debug
-           setError(error.message); // Exibe a mensagem de erro na tela
+          setError(error.message); // Exibe a mensagem de erro na tela
         }
       }
 
