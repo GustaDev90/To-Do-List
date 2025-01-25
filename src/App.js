@@ -5,29 +5,31 @@ import Button from "./Button";
 export default function App() {
     // Variáveis de estado
     const [input, setInput] = useState(""); // Estado para o input
-    const [tarefas, setTarefas] = useState([]); // Estado paras tarefas
+    const [tarefas, setTarefas] = useState([]); // Estado para as tarefas
     const [error, setError] = useState(""); // Estado para o erro
 
-   // Adiciona uma tarefa
-   function handleAddTarefa() {
+    // Adiciona uma tarefa
+    function handleAddTarefa() {
         if (input.trim() !== "") {
-            setTarefas([...tarefas, input]); //Envia a tarefa
-            setInput(""); //Limpa o input ao enviar o tarefa
+            setTarefas([...tarefas, input]); // Envia a tarefa
+            setInput(""); // Limpa o input ao enviar a tarefa
             setError(""); // Limpa o erro caso o input seja válido
         } else {
-           setError("Insira uma tarefa")
+           setError("Insira uma tarefa");
         }
-      }
+    }
 
-    //Enviar tarefa com a tecla enter
+    // Enviar tarefa com a tecla enter
     function keyPress (e) {
-        if (e.key === "Enter" && input.trim() !== "") {
-           setTarefas([...tarefas, input]); //Envia a tarefa
-           setInput("")  //Limpa o input ao enviar o tarefa
-           setError(""); // Limpa o erro caso o input seja válido
-        } else if (input.trim() === "") {
-           setError("Insira uma tarefa")
-        } 
+        if (e.key === "Enter") {
+            if (input.trim() !== "") {
+                setTarefas([...tarefas, input]); // Envia a tarefa
+                setInput(""); // Limpa o input ao enviar a tarefa
+                setError(""); // Limpa o erro caso o input seja válido
+            } else {
+                setError("Insira uma tarefa");
+            }
+        }
     }
 
     // Remove uma tarefa
@@ -70,10 +72,9 @@ export default function App() {
                 style={{ borderColor: error ? 'red' : '#ccc', }}
             />
 
-             <p style={{ color: 'red', fontWeight: 'bold', marginTop: '1px', fontSize: '14px' }}>
+            <p style={{ color: 'red', fontWeight: 'bold', marginTop: '1px', fontSize: '14px' }}>
                 {error}
-              </p>
-
+            </p>
 
             <Button onClick={handleAddTarefa} className="Button1">
                 Adicionar Tarefa
