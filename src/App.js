@@ -17,13 +17,27 @@ export default function App() {
             setError(""); // Limpa o erro caso o input seja válido
             
         } else {
-          throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
+           throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
         }
          
         } catch (error) {
-          setError(error.message); // Exibe a mensagem de erro na tela
+           setError(error.message); // Exibe a mensagem de erro na tela
         }
       }
+
+      //Enviar tarefa com a tecla enter
+    function keyPress (e) {
+      try {
+        if (e.key === "Enter" && input.trim() !== "") {
+           setTarefas([...tarefas, input]); //Envia a tarefa
+           setInput("")  //Limpa o input ao enviar o tarefa
+        } else {
+           throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
+        } 
+      } catch (error) {
+         setError(error.message) // Exibe a mensagem de erro na tela
+      }
+    }
 
 
     // Remove uma tarefa
@@ -36,16 +50,6 @@ export default function App() {
     // Remove todas as tarefas de uma vez
     function handleRemoveAllTarefas() {
         setTarefas([]);
-    }
-
-    //Enviar tarefa com a tecla enter
-    function keyPress (e) {
-        if (e.key === "Enter" && input.trim() !== "") {
-           setTarefas([...tarefas, input]); //Envia a tarefa
-           setInput("")  //Limpa o input ao enviar o tarefa
-        } else {
-          throw new Error("Insira uma tarefa"); // Lança o erro caso o input esteja vazio
-        }
     }
 
     // useMemo para contar quantas tarefas estão em execução
