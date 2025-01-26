@@ -9,26 +9,13 @@ export default function App() {
     const [error, setError] = useState(""); // Estado para o erro
 
     // Adiciona uma tarefa
-    function handleAddTarefa() {
-        if (input.trim() !== "") {
+    function handleAddTarefa(e) {
+        if (input.trim() !== "" || e.key === "Enter") {
             setTarefas([...tarefas, input]); // Envia a tarefa
             setInput(""); // Limpa o input ao enviar a tarefa
             setError(""); // Limpa o erro caso o input seja válido
         } else {
            setError("Insira uma tarefa");
-        }
-    }
-
-    // Enviar tarefa com a tecla enter
-    function keyPress (e) {
-        if (e.key === "Enter") {
-            if (input.trim() !== "") {
-                setTarefas([...tarefas, input]); // Envia a tarefa
-                setInput(""); // Limpa o input ao enviar a tarefa
-                setError(""); // Limpa o erro caso o input seja válido
-            } else {
-                setError("Insira uma tarefa");
-            }
         }
     }
 
