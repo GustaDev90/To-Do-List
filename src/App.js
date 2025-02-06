@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import "./App.css";
 import Button from "./Button";
 
-export default function App() {
+function App () {
     // Variáveis de estado
     const [input, setInput] = useState(""); // Estado para o input
     const [tarefas, setTarefas] = useState([]); // Estado para as tarefas
@@ -86,3 +86,5 @@ export default function App() {
         </div>
     );
 }
+
+export default App;
